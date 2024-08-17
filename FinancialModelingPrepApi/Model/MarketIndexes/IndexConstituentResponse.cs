@@ -28,4 +28,13 @@ namespace MatthiWare.FinancialModelingPrep.Model.MarketIndexes
         [JsonPropertyName("founded")]
         public string Founded { get; set; }
     }
+
+	public class SectorConstituentResponse
+	{
+		[JsonPropertyName("changesPercentage")]
+		public string changesPercentage { get; set; }
+
+		[JsonPropertyName("sector")]
+		public string Sector { get; set; }
+	}
 }

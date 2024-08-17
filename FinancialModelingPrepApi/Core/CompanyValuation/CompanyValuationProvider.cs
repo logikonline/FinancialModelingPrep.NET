@@ -236,9 +236,9 @@ namespace MatthiWare.FinancialModelingPrep.Core.CompanyValuation
 
             var queryString = new QueryStringBuilder();
 
-            queryString.Add("tickers", string.Join(',', symbols));
+			queryString.Add("tickers", string.Join(",", symbols));
 
-            if (limit != null)
+			if (limit != null)
             {
                 queryString.Add("limit", limit);
             }
@@ -438,7 +438,7 @@ namespace MatthiWare.FinancialModelingPrep.Core.CompanyValuation
             var pathParams = new NameValueCollection()
             {
                 { "version", ApiVersion.v3.ToString() },
-                { "symbols", string.Join(',', symbols) }
+                { "symbols", string.Join(",", symbols) }
             };
 
             if (string.IsNullOrEmpty(pathParams["symbols"]))

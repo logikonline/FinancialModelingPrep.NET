@@ -10,5 +10,6 @@ namespace MatthiWare.FinancialModelingPrep.Abstractions.MarketIndexes
         Task<ApiResponse<List<IndexConstituentResponse>>> GetSP500CompaniesAsync();
         Task<ApiResponse<List<IndexConstituentResponse>>> GetNasdaqCompaniesAsync();
         Task<ApiResponse<List<IndexConstituentResponse>>> GetDowJonesCompaniesAsync();
-    }
+		Task<ApiResponse<List<SectorConstituentResponse>>> GetSectorPerformanceAsync();
+	}
 }

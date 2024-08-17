@@ -40,9 +40,9 @@ namespace MatthiWare.FinancialModelingPrep.Core.MarketIndexes
             };
 
             return client.GetJsonAsync<List<IndexConstituentResponse>>(url, pathParams, null);
-        }
+		}//
 
-        public Task<ApiResponse<List<IndexConstituentResponse>>> GetSP500CompaniesAsync()
+		public Task<ApiResponse<List<IndexConstituentResponse>>> GetSP500CompaniesAsync()
         {
             const string url = "[version]/sp500_constituent";
 
@@ -52,6 +52,18 @@ namespace MatthiWare.FinancialModelingPrep.Core.MarketIndexes
             };
 
             return client.GetJsonAsync<List<IndexConstituentResponse>>(url, pathParams, null);
-        }
-    }
+		}
+
+		public Task<ApiResponse<List<SectorConstituentResponse>>> GetSectorPerformanceAsync()
+		{
+			const string url = "[version]/sectors-performance";
+
+			var pathParams = new NameValueCollection()
+			{
+				{ "version", ApiVersion.v3.ToString() },
+			};
+
+			return client.GetJsonAsync<List<SectorConstituentResponse>>(url, pathParams, null);
+		}
+	}
 }
